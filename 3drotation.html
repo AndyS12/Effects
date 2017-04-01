@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title> 3D Rotation </title>
+	<link rel="stylesheet" href="ce.css"/>
+</head>
+<body>
+	<p id="demo"></p>
+	<div id="window">
+	<button class="butn" onclick="F()">Change front-face color</button>
+	<button class="butn" onclick="B()">Change back-face color</button>
+	<button class="butn" onclick="L()">Change left-face color</button>
+	<button class="butn" onclick="R()">Change right-face color</button>
+	<button class="butn" onclick="T()">Change top-face color</button>
+	<button class="butn" onclick="B()">Change bottom-face color</button>
+	<button class="stop" onclick="Stop()">Stop rotating</button>
+	<button class="start" onclick="Start()">Start rotating</button>
+	<div id="mainDiv">
+		<div id="boxDiv" style="animation: rotate 5s linear infinite">
+			<div id="front" style="background: purple"></div>
+			<div id="back" style="background: #101010"></div>
+			<div id="left" style="background:#106767"></div>
+			<div id="right" style="background: red"></div>
+			<div id="top" style="background: #FFFFFF"></div>
+			<div id="bottom" style="background: pink"></div>
+		</div>
+	</div>
+	</div>
+	<script>
+		function F(){
+			var x="#";
+			for(var i=0; i<6; i++){
+				var y=Math.floor(Math.random()*10);
+				x=x+y;
+			}
+			var z="background: "+x;
+			document.getElementById('front').style = z;
+		}
+		function B(){
+			var x="#";
+			for(var i=0; i<6; i++){
+				var y=Math.floor(Math.random()*10);
+				x=x+y;
+			}
+			var z="background: "+x;
+			document.getElementById('back').style = z;
+		}function L(){
+			var x="#";
+			for(var i=0; i<6; i++){
+				var y=Math.floor(Math.random()*10);
+				x=x+y;
+			}
+			var z="background: "+x;
+			document.getElementById('left').style = z;
+		}function R(){
+			var x="#";
+			for(var i=0; i<6; i++){
+				var y=Math.floor(Math.random()*10);
+				x=x+y;
+			}
+			var z="background: "+x;
+			document.getElementById('right').style = z;
+		}function T(){
+			var x="#";
+			for(var i=0; i<6; i++){
+				var y=Math.floor(Math.random()*10);
+				x=x+y;
+			}
+			var z="background: "+x;
+			document.getElementById('top').style = z;
+		}function B(){
+			var x="#";
+			for(var i=0; i<6; i++){
+				var y=Math.floor(Math.random()*10);
+				x=x+y;
+			}
+			var z="background: "+x;
+			document.getElementById('bottom').style = z;
+		}
+		function Stop(){
+			document.getElementById('boxDiv').style = "animation: rotate 1s linear";
+		}
+		function Start(){
+			document.getElementById('boxDiv').style = "animation: rotate 5s linear infinite";
+		}
+	</script>
+</body>
+</html>
